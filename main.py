@@ -13,7 +13,8 @@ def main():
         GITHUB_RUN_NUMBEREnv = os.environ["GITHUB_RUN_NUMBER"]
         my_output = f"CI {CIEnv} GITHUB_WORKFLOW {GITHUB_WORKFLOWEnv} GITHUB_RUN_ID {GITHUB_RUN_IDEnv}" + os.linesep \
                     + f"GITHUB_RUN_NUMBER {GITHUB_RUN_NUMBEREnv}"
-    
+
+
     print(f"::set-output name=myOutput::{my_output}")
 
 
