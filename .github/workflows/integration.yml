@@ -15,7 +15,7 @@ jobs:
         id: selftest
 
         # Put your action repo here
-        uses: briegel0/python_show_env_action@master
+        uses: briegel0/python_show_env_action@main
         with: 
            myInput: 'true'
             
