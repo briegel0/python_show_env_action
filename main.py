@@ -15,5 +15,6 @@ def main():
                     + f"GITHUB_RUN_NUMBER {GITHUB_RUN_NUMBEREnv}" )
     print(f"::set-output name=myOutput::{my_output}")
 
+
 if __name__ == "__main__":
     main()
