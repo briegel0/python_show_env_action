@@ -11,7 +11,7 @@ def main():
         GITHUB_WORKFLOWEnv = os.environ["GITHUB_WORKFLOW"]
         GITHUB_RUN_IDEnv = os.environ["GITHUB_RUN_ID"]
         GITHUB_RUN_NUMBEREnv = os.environ["GITHUB_RUN_NUMBER"]
-        my_output = f"CI {CIEnv} GITHUB_WORKFLOW {GITHUB_WORKFLOWEnv} GITHUB_RUN_ID {GITHUB_RUN_IDEnv}" + os.linesep \
+        my_output = f"CI {CIEnv} GITHUB_WORKFLOW {GITHUB_WORKFLOWEnv} GITHUB_RUN_ID {GITHUB_RUN_IDEnv}\n" \
                     + f"GITHUB_RUN_NUMBER {GITHUB_RUN_NUMBEREnv}"
 
 
