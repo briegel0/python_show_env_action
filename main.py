@@ -5,10 +5,14 @@ import requests  # noqa We are just importing this to prove the dependency insta
 def main():
     my_input = os.environ["INPUT_MYINPUT"]
 
-    my_output = ''
+    my_output = 'Show No GitHub env values'
     if my_input == "true":
-        ciEnv = os.environ["CI"]
-        my_output = f"CI {ciEnv}"
+        CIEnv = os.environ["CI"]
+        GITHUB_WORKFLOWEnv = os.environ["GITHUB_WORKFLOW"]
+        GITHUB_RUN_IDEnv = os.environ["GITHUB_RUN_ID"]
+        GITHUB_RUN_NUMBEREnv = os.environ["GITHUB_RUN_NUMBER"]
+        my_output = f"CI {CIEnv} GITHUB_WORKFLOW {GITHUB_WORKFLOWEnv} GITHUB_RUN_ID {GITHUB_RUN_IDEnv}" + os.linesep \
+                    + f"GITHUB_RUN_NUMBER {GITHUB_RUN_NUMBEREnv}"
     
 
     print(f"::set-output name=myOutput::{my_output}")
