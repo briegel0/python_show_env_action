@@ -5,7 +5,7 @@ on:
         - master
     workflow_dispatch:
         branches: [ master ]  
-        
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,7 +15,7 @@ jobs:
         id: selftest
 
         # Put your action repo here
-        uses: briegel0/python-show_env_action@master
+        uses: briegel0/python_show_env_action@master
         with: 
            myInput: 'true'
             
