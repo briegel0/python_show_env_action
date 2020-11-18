@@ -1,0 +1,14 @@
+name: "Python Container Action Template"
+description: "Get started with Python Container actions"
+author: "William Riegel"
+inputs:
+  myInput:
+    description: "Show github env"
+    default: "true"
+    required: false
+outputs:
+  myOutput:
+    description: "Output from the action"
+runs:
+  using: "docker"
+  image: "Dockerfile"
