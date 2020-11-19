@@ -4,10 +4,14 @@ import requests  # noqa We are just importing this to prove the dependency insta
 #  showGithubVars
 
 def main():
-    my_input = os.environ["INPUT_SHOWGITHUBVARS"]
+    showGitHubVars = os.environ["INPUT_SHOWGITHUBVARS"]
 
-    my_output = 'Show No GitHub env values'
-    if my_input == "true":
+    listOfAppEnvVars = os.environ["INPUT_LISTOFAPPENVVARS"]
+
+    newLineEsc = "%0A"
+
+    my_output = ''
+    if showGitHubVars == "true":
         CIEnv = os.environ["CI"]
         GITHUB_WORKFLOWEnv = os.environ["GITHUB_WORKFLOW"]
         GITHUB_RUN_IDEnv = os.environ["GITHUB_RUN_ID"]
@@ -15,8 +19,15 @@ def main():
          
         # newline = %0A
 
-        my_output = (f"CI {CIEnv} GITHUB_WORKFLOW {GITHUB_WORKFLOWEnv} GITHUB_RUN_ID {GITHUB_RUN_IDEnv}%0A" 
+        my_output = (f"CI {CIEnv} GITHUB_WORKFLOW {GITHUB_WORKFLOWEnv} GITHUB_RUN_ID {GITHUB_RUN_IDEnv}" +  newLineEsc
                     + f"GITHUB_RUN_NUMBER {GITHUB_RUN_NUMBEREnv}" )
+
+    if len(listOfAppEnvVars) > 0:
+        my_list = listOfAppEnvVars.split(",")
+        for env in my_list:
+
+
+
 
     print(f"::set-output name=myOutput::{my_output}")
 

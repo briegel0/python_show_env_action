@@ -5,7 +5,11 @@ inputs:
   showGithubVars:
     description: "Show github env"
     default: "true"
-    required: false
+    required: true
+  listOfAppEnvVars:
+    description: "App Env Vars, comma delimited names"
+    default: ""
+    required: false    
 outputs:
   myOutput:
     description: "Output from the action"
