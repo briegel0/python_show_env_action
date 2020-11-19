@@ -24,7 +24,7 @@ def main():
 
     if len(listOfAppEnvVars) > 0:
         my_list = listOfAppEnvVars.split(",")
-        for env in my_list:
+        # for env in my_list:
 
 
 
