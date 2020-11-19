@@ -12,7 +12,7 @@ def main():
 
     my_output = ''
     if showGitHubVars == "true":
-        my_output = 'Git Hub Vars'
+        my_output = newLineEsc + 'Git Hub Vars'
         CIEnv = os.environ["CI"]
         GITHUB_WORKFLOWEnv = os.environ["GITHUB_WORKFLOW"]
         GITHUB_RUN_IDEnv = os.environ["GITHUB_RUN_ID"]
@@ -28,7 +28,7 @@ def main():
 
 
     if len(listOfAppEnvVars) > 0:
-        my_output += "App Env Vars " + newLineEsc
+        my_output += newLineEsc + "App Env Vars " + newLineEsc
         my_list = listOfAppEnvVars.split(",")
         for appEnvVar in my_list:
             appEnvValue = os.environ[appEnvVar]

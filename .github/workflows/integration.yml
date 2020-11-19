@@ -6,6 +6,10 @@ on:
     workflow_dispatch:
         branches: [ main ]  
 
+env:
+  workflow_env_var1: 'workflow env 1'
+  workflow_env_var2: 'workflow env 2'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,7 +22,7 @@ jobs:
         uses: briegel0/python_show_env_action@main
         with: 
            showGithubVars: 'true'
-            
+           listOfAppEnvVars: 'workflow_env_var1,workflow_env_var2'
 
       - name: Check outputs
         run: |
