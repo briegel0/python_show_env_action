@@ -17,10 +17,10 @@ jobs:
         # Put your action repo here
         uses: briegel0/python_show_env_action@main
         with: 
-           myInput: 'true'
+           myInput: 'false'
             
 
       - name: Check outputs
         run: |
           echo " output ${{ steps.selftest.outputs.myOutput}}"
-          test "${{ steps.selftest.outputs.myOutput }}" == "Hello world"
+#         test "${{ steps.selftest.outputs.myOutput }}" == "Hello world"
