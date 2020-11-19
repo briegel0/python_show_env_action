@@ -36,10 +36,15 @@ jobs:
         run: |
           echo " output ${{ steps.selftest.outputs.myOutput}}"
 
+      - name: Check ok outputs dummy
+        if: contains(steps.selftest.outputs.myOutput, 'workflow_env_var1=workflow env 1')
+        run: |
+          exit(-1)     
+
       - name: Check ok outputs
         if: contains(steps.selftest.outputs.myOutput, 'workflow_env_var1=workflow env 1') == false
         run: |
-          exit(-1)     
+          exit(-1)               
 
       - name: Check bad outputs             
         if: contains(steps.selftest.outputs.myOutput, 'workflow_env_var1=workflow env 12')
