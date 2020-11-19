@@ -23,8 +23,9 @@ def main():
         my_output += newLineEsc + f"CI={CIEnv}" + newLineEsc  \
             + f"GITHUB_WORKFLOW={GITHUB_WORKFLOWEnv}" + newLineEsc  \
             + f"GITHUB_RUN_ID={GITHUB_RUN_IDEnv}" + newLineEsc \
-            + f"GITHUB_RUN_NUMBER={GITHUB_RUN_NUMBEREnv}" 
-
+            + f"GITHUB_RUN_NUMBER={GITHUB_RUN_NUMBEREnv}" + newLineEsc \
+            + f"GITHUB_ACTION={os.environ['GITHUB_ACTION']}" + newLineEsc \
+            + f"GITHUB_ACTIONS={os.environ['GITHUB_ACTIONS']}" + newLineEsc \
 
 
     if len(listOfAppEnvVars) > 0:
