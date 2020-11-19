@@ -19,8 +19,8 @@ def main():
          
         # newline = %0A
 
-        my_output = (f"CI {CIEnv} GITHUB_WORKFLOW {GITHUB_WORKFLOWEnv} GITHUB_RUN_ID {GITHUB_RUN_IDEnv}" +  newLineEsc
-                    + f"GITHUB_RUN_NUMBER {GITHUB_RUN_NUMBEREnv}" )
+        my_output = f"CI {CIEnv} GITHUB_WORKFLOW {GITHUB_WORKFLOWEnv} GITHUB_RUN_ID {GITHUB_RUN_IDEnv}" +  newLineEsc \
+                    + f"GITHUB_RUN_NUMBER {GITHUB_RUN_NUMBEREnv}" 
 
     if len(listOfAppEnvVars) > 0:
         my_list = listOfAppEnvVars.split(",")
