@@ -32,7 +32,10 @@ jobs:
            showGithubVars: 'true'
            listOfAppEnvVars: 'workflow_env_var1,workflow_env_var2,job_env_var1,step_env_var1,step_env_var2'
 
-      - name: Check outputs
+      - name: Show outputs
         run: |
           echo " output ${{ steps.selftest.outputs.myOutput}}"
-#         test "${{ steps.selftest.outputs.myOutput }}" == "Hello world"
+
+      - name: Check outputs
+        run: |
+          test "${{ steps.selftest.outputs.myOutput }}" == "*workflow_env_var1=workflow env 1*"         
