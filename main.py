@@ -26,7 +26,18 @@ def main():
             + f"GITHUB_RUN_NUMBER={GITHUB_RUN_NUMBEREnv}" + newLineEsc \
             + f"GITHUB_ACTION={os.environ['GITHUB_ACTION']}" + newLineEsc \
             + f"GITHUB_ACTIONS={os.environ['GITHUB_ACTIONS']}" + newLineEsc \
-
+            + f"GITHUB_ACTOR={os.environ['GITHUB_ACTOR']}" + newLineEsc \
+            + f"GITHUB_REPOSITORY={os.environ['GITHUB_REPOSITORY']}" + newLineEsc \
+            + f"GITHUB_EVENT_NAME={os.environ['GITHUB_EVENT_NAME']}" + newLineEsc \
+            + f"GITHUB_EVENT_PATH={os.environ['GITHUB_EVENT_PATH']}" + newLineEsc \
+            + f"GITHUB_WORKSPACE={os.environ['GITHUB_WORKSPACE']}" + newLineEsc \
+            + f"GITHUB_SHA={os.environ['GITHUB_SHA']}" + newLineEsc \
+            + f"GITHUB_REF={os.environ['GITHUB_REF']}" + newLineEsc \
+            + f"GITHUB_HEAD_REF={os.environ['GITHUB_HEAD_REF']}" + newLineEsc \
+            + f"GITHUB_BASE_REF={os.environ['GITHUB_BASE_REF']}" + newLineEsc \
+            + f"GITHUB_SERVER_URL={os.environ['GITHUB_SERVER_URL']}" + newLineEsc \
+            + f"GITHUB_API_URL={os.environ['GITHUB_API_URL']}" + newLineEsc \
+            + f"GITHUB_GRAPHQL_URL={os.environ['GITHUB_GRAPHQL_URL']}" + newLineEsc \
 
     if len(listOfAppEnvVars) > 0:
         my_output += newLineEsc + "App Env Vars " + newLineEsc
