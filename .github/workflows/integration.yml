@@ -37,5 +37,6 @@ jobs:
           echo " output ${{ steps.selftest.outputs.myOutput}}"
 
       - name: Check outputs
+        if: contains(steps.selftest.outputs.myOutput, 'workflow_env_var1=workflow env 1') == false
         run: |
-          test contains(${{ steps.selftest.outputs.myOutput }}, "workflow_env_var1=workflow env 1")         
+          exit(-1)        
