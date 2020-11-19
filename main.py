@@ -1,9 +1,10 @@
 import os
 import requests  # noqa We are just importing this to prove the dependency installed correctly
 
+#  showGithubVars
 
 def main():
-    my_input = os.environ["INPUT_MYINPUT"]
+    my_input = os.environ["INPUT_SHOWGITHUBVARS"]
 
     my_output = 'Show No GitHub env values'
     if my_input == "true":

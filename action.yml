@@ -2,7 +2,7 @@ name: "Python Container Action Template"
 description: "Get started with Python Container actions"
 author: "William Riegel"
 inputs:
-  myInput:
+  showGithubVars:
     description: "Show github env"
     default: "true"
     required: false

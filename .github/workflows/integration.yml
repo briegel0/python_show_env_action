@@ -17,7 +17,7 @@ jobs:
         # Put your action repo here
         uses: briegel0/python_show_env_action@main
         with: 
-           myInput: 'false'
+           showGithubVars: 'true'
             
 
       - name: Check outputs
