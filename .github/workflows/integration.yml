@@ -38,4 +38,4 @@ jobs:
 
       - name: Check outputs
         run: |
-          test "${{ steps.selftest.outputs.myOutput }}" == "*workflow_env_var1=workflow env 1*"         
+          test contains("${{ steps.selftest.outputs.myOutput }}", "workflow_env_var1=workflow env 1")         
