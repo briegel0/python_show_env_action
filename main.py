@@ -20,10 +20,10 @@ def main():
          
         # newline = %0A
 
-        my_output += newLineEsc + f"CI {CIEnv}" + newLineEsc  \
-            + f"GITHUB_WORKFLOW {GITHUB_WORKFLOWEnv}" + newLineEsc  \
-            + f"GITHUB_RUN_ID {GITHUB_RUN_IDEnv}" + newLineEsc \
-            + f"GITHUB_RUN_NUMBER {GITHUB_RUN_NUMBEREnv}" 
+        my_output += newLineEsc + f"CI={CIEnv}" + newLineEsc  \
+            + f"GITHUB_WORKFLOW={GITHUB_WORKFLOWEnv}" + newLineEsc  \
+            + f"GITHUB_RUN_ID={GITHUB_RUN_IDEnv}" + newLineEsc \
+            + f"GITHUB_RUN_NUMBER={GITHUB_RUN_NUMBEREnv}" 
 
 
 
@@ -32,7 +32,7 @@ def main():
         my_list = listOfAppEnvVars.split(",")
         for appEnvVar in my_list:
             appEnvValue = os.environ[appEnvVar]
-            my_output +=  f"{appEnvVar} {appEnvValue}" + newLineEsc
+            my_output +=  f"{appEnvVar}={appEnvValue}" + newLineEsc
 
 
     print(f"::set-output name=myOutput::{my_output}")
